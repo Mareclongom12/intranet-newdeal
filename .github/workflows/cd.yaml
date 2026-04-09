@@ -27,17 +27,11 @@ jobs:
 
   deploy:
     name: Job 2 - Déploiement Production
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: scan
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Login Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Build et Déployer
         run: |
