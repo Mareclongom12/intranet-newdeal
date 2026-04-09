@@ -15,7 +15,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/intranet-newdeal:latest .
+          docker build -t mareclongom12/intranet-newdeal:latest.
 
   scan:
     name: Job 2 - Scan Sécurité
@@ -53,5 +53,5 @@ jobs:
 
       - name: Build et Push image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/intranet-newdeal:latest .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/intranet-newdeal:latest
+          docker build -t mareclongom12/intranet-newdeal:latestt .
+          docker push mareclongom12/intranet-newdeal:latest
