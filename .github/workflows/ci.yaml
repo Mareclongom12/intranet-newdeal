@@ -15,7 +15,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t mareclongom12/intranet-newdeal:latest.
+          docker build -t marcelongom12/intranet-newdeal:latest .
 
   scan:
     name: Job 2 - Scan Sécurité
@@ -49,9 +49,9 @@ jobs:
 
       - name: Login Docker Hub
         run: |
-          echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+          echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "marcelongom12" --password-stdin
 
       - name: Build et Push image
         run: |
-          docker build -t mareclongom12/intranet-newdeal:latestt .
-          docker push mareclongom12/intranet-newdeal:latest
+          docker build -t marcelongom12/intranet-newdeal:latest .
+          docker push marcelongom12/intranet-newdeal:latest
