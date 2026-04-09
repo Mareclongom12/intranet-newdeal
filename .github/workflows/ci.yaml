@@ -58,6 +58,4 @@ jobs:
       - name: Build et Push image
         run: |
           docker build -t marcelongom12/intranet-newdeal:latest .
-          docker push marcelongom12/intranet-newdeal:latestgit add .
-git commit -m "Fix Docker Hub login"
-git push origin dev
+          docker push marcelongom12/intranet-newdeal:latest
